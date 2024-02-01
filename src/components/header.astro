@@ -1,0 +1,15 @@
+---
+import { ModeToggle } from "./ModeTogle";
+import MyAvatar from "./Avatar";
+import Navbar from "./Navbar";
+---
+
+<header
+  class="px-4 py-1 flex flex-row gap-4 justify-between bg-purple-300 dark:bg-purple-950 m-6 rounded-full"
+>
+  <nav class="flex justify-between flex-grow">
+    <MyAvatar />
+    <Navbar client:load />
+    <ModeToggle client:load />
+  </nav>
+</header>
