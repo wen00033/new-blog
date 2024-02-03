@@ -71,14 +71,14 @@ function Navbar() {
           variants={container}
           initial="hidden"
           animate="show"
-          className=" transition-all  flex flex-col  dark:bg-purple-950 justify-center text-center gap-16 fixed left-0 bottom-0 w-full h-screen bg-purple-400 t"
+          className=" transition-all  flex flex-col  dark:bg-purple-950 justify-center text-center gap-28 fixed left-0 bottom-0 w-full h-screen bg-purple-400 "
         >
           <motion.a
             whileTap={{ scale: 0.8 }}
             whileHover={{ scale: 1.2 }}
             variants={slideIn}
             href="/"
-            className=" hover:text-xl uppercase  font-black  "
+            className=" hover:text-5xl uppercase  font-black text-3xl "
           >
             About
           </motion.a>
@@ -87,7 +87,7 @@ function Navbar() {
             variants={slideIn}
             whileHover={{ scale: 1.2 }}
             href="/contact/"
-            className=" hover:text-xl uppercase  font-black  "
+            className=" hover:text-5xl uppercase  font-black text-3xl "
           >
             contact
           </motion.a>
@@ -96,7 +96,7 @@ function Navbar() {
             whileHover={{ scale: 1.2 }}
             variants={slideIn}
             href="/work/"
-            className="hover:text-xl uppercase   "
+            className="hover:text-5xl uppercase text-3xl  "
           >
             work
           </motion.a>
