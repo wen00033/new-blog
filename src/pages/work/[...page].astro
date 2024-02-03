@@ -1,0 +1,30 @@
+---
+import WorkLayout from "../../layouts/Pagelayout.astro";
+import CardWork from "../../components/CardWork";
+import MyPagination from "../../components/Pagination";
+export async function getStaticPaths({ paginate }) {
+  const allWorks = await Astro.glob("./*.md");
+  return paginate(allWorks, {
+    pageSize: 4,
+  });
+}
+const { page } = Astro.props;
+---
+
+<WorkLayout title="work page">
+  <ul class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+    {
+      page.data.map((work) => (
+        <div transition:animate="initial">
+          <CardWork client:load data={work.frontmatter} url={work.url} />
+        </div>
+      ))
+    }
+  </ul>
+  <MyPagination
+    curUrl={page.url.current}
+    page={page}
+    preUrl={page.url.prev}
+    nextUrl={page.url.next}
+  />
+</WorkLayout>

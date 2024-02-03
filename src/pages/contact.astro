@@ -1,7 +1,33 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/Pagelayout.astro";
+import NewContact from "@/components/Contact";
+import { Linkedin } from "lucide-react";
+import { Github } from "lucide-react";
 ---
 
-<Layout title="contact page">
-  <h2>This is a contact page</h2>
+<Layout title="Contact">
+  <div class="grid md:grid-cols-2 gap-1">
+    <div class="md:order-1 align-middle h-40 md:h-full">
+      <img
+        class="object-contain w-full max-h-full"
+        src="/email.svg"
+        alt="contact me"
+      />
+    </div>
+    <div>
+      <div class="flex gap-8 m-5">
+        <a
+          class="scale-150"
+          href="https://www.linkedin.com/in/chi-hung-wen-2b4830231"
+          target="_blank"
+        >
+          <Linkedin className="animate-bounce " />
+        </a>
+        <a class="scale-150" target="_blank" href="https://github.com/wen00033">
+          <Github className="animate-bounce" />
+        </a>
+      </div>
+      <NewContact client:load />
+    </div>
+  </div>
 </Layout>

@@ -1,7 +1,73 @@
 ---
 import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+import { AspectRatio } from "../components/ui/aspect-ratio";
+import { MousePointer2 } from "lucide-react";
+import { Github } from "lucide-react";
+import { Badge } from "../components/ui/badge";
 ---
 
-<Layout title="work page">
-  <slot />
+<Layout title={frontmatter.title}>
+  <section class="grid md:grid-cols-2 gap-3 md:gap-10">
+    <div>
+      <h1
+        class="w-fit px-2 skew-y--3 justify-start text-3xl my-1 md:text-xl p-1 uppercase font-extrabold font-display tracking-wide"
+      >
+        {frontmatter.title}
+      </h1>
+      <div class="overflow-hidden">
+        <AspectRatio ratio={16 / 7.2}>
+          <img
+            class="rounded-md object-cover overflow-hidden"
+            src={frontmatter.images.src}
+            alt={frontmatter.images.alt}
+          />
+        </AspectRatio>
+      </div>
+      <ul class="flex gap-1 my-2">
+        {frontmatter.category.map((el) => <Badge>{el}</Badge>)}
+      </ul>
+      <div class="grid gap-4 mt-2">
+        <p>
+          <strong
+            class="bg-purple-400 dark:bg-purple-950 p-1 px-2 rounded-full"
+          >
+            Date</strong
+          >
+          {frontmatter.date}
+        </p>
+        <p>
+          <strong
+            class="bg-purple-400 dark:bg-purple-950 p-1 px-2 rounded-full"
+          >
+            Description</strong
+          >
+          {frontmatter.description}
+        </p>
+      </div>
+      <div class="flex justify-between md:mt-2">
+        <a
+          class="flex gap-1 hover:scale-110 transition"
+          href={frontmatter.website}
+          target="_blank"><MousePointer2 />Check My website !</a
+        >
+        <a
+          class="flex gap-1 hover:scale-110 transition"
+          href={frontmatter.github}
+          target="_blank"><Github />Check guthub</a
+        >
+      </div>
+    </div>
+    <div class="work-content align-middle">
+      <div class="content">
+        <span
+          class="animate-bounce bg-purple-400 dark:bg-purple-950 p-1 px-2 rounded-full"
+        >
+          How do I make it
+        </span>
+        <slot />
+      </div>
+    </div>
+  </section>
+  <aside class="text-center">next post</aside>
 </Layout>

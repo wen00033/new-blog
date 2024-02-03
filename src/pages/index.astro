@@ -1,12 +1,63 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import { Linkedin } from "lucide-react";
+import { Github } from "lucide-react";
+import Layout from "../layouts/Pagelayout.astro";
+import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 ---
 
-<Layout title="about page">
-  <section>
-    <p>
-      Hello guys! I'm a web developer, love to explorer the web world and
-      building interactive website.
-    </p>
+<Layout title="about">
+  <section class="flex flex-col md:flex-row">
+    <motion.div
+      client:load
+      drag
+      dragConstraints={{
+        top: -50,
+        left: -50,
+        right: 50,
+        bottom: 50,
+      }}
+      className="overflow-hidden rounded-2xl m-10"
+    >
+      <img
+        class="w-full object-cover aspect-square"
+        src="/profile image.jpg"
+        alt="image"
+      />
+    </motion.div>
+    <div class="md:-order-1 md:self-center">
+      <TypeAnimation
+        client:load
+        sequence={[
+          "Hello guys! I'm a movie lover",
+          1000,
+          "Hello guys! I'm a cat lover",
+          1000,
+          "Hello guys! I'm a Front-end developer",
+          1000,
+        ]}
+        wrapper="span"
+        speed={50}
+        style={{ fontSize: "2em", display: "inline-block" }}
+        repeat={Infinity}
+      />
+
+      <h1 class="md:text-3xl font-black">
+        Love to explorer the web world and building interactive website.
+      </h1>
+      <div class="flex gap-8 mt-5">
+        <a
+          class="scale-150"
+          href="https://www.linkedin.com/in/chi-hung-wen-2b4830231"
+          target="_blank"
+        >
+          <Linkedin className="animate-bounce " />
+        </a>
+        <a class="scale-150" target="_blank" href="https://github.com/wen00033">
+          <Github className="animate-bounce" />
+        </a>
+      </div>
+    </div>
   </section>
+  <section></section>
 </Layout>

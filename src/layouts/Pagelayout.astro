@@ -1,0 +1,14 @@
+---
+import Layout from "./Layout.astro";
+const { title } = Astro.props;
+// import "../../public/profile image.jpg";
+---
+
+<Layout>
+  <h1
+    class="w-fit px-2 skew-y--3 justify-start text-3xl my-1 md:text-4xl p-1 uppercase font-extrabold font-display tracking-wide"
+  >
+    {title}
+  </h1>
+  <slot />
+</Layout>

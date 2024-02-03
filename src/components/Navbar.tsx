@@ -35,34 +35,28 @@ function Navbar() {
 
   const matches = useMediaQuery("(min-width: 768px)");
   return (
-    <NavigationMenu className=" p-4 ">
+    <NavigationMenu className=" p-4 transition ease-out">
       {matches && (
         <NavigationMenuList className=" gap-3 uppercase transition-all ease-out  ">
-          <NavigationMenuItem className="  hover:scale-110">
-            <NavigationMenuLink className=" p-1 rounded-sm border-black dark:border-white border-solid border-2 ">
-              <a href="/">About</a>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem className="  hover:scale-110     ">
-            <NavigationMenuLink>
-              <a
-                href="/work"
-                className=" p-1 rounded-sm border-black border-solid border-2 dark:border-white "
-              >
-                work
-              </a>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem className="  hover:scale-110     ">
-            <NavigationMenuLink>
-              <a
-                href="/contact"
-                className=" p-1 rounded-sm border-black border-solid border-2 dark:border-white "
-              >
-                contact
-              </a>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
+          <a
+            href="/"
+            className=" p-1 rounded-sm  font-black  hover:scale-110  "
+          >
+            About
+          </a>
+          <a
+            href="/work/"
+            className=" p-1 rounded-sm  font-black  hover:scale-110  "
+          >
+            work
+          </a>
+
+          <a
+            href="/contact/"
+            className=" p-1 rounded-sm  font-black hover:scale-110   "
+          >
+            contact
+          </a>
         </NavigationMenuList>
       )}
       {!matches && (
@@ -84,7 +78,7 @@ function Navbar() {
             whileHover={{ scale: 1.2 }}
             variants={slideIn}
             href="/"
-            className=" hover:text-xl uppercase  dark:border-white "
+            className=" hover:text-xl uppercase  font-black  "
           >
             About
           </motion.a>
@@ -92,8 +86,8 @@ function Navbar() {
             whileTap={{ scale: 0.8 }}
             variants={slideIn}
             whileHover={{ scale: 1.2 }}
-            href="/contact"
-            className=" hover:text-xl uppercase  dark:border-white "
+            href="/contact/"
+            className=" hover:text-xl uppercase  font-black  "
           >
             contact
           </motion.a>
@@ -101,8 +95,8 @@ function Navbar() {
             whileTap={{ scale: 0.8 }}
             whileHover={{ scale: 1.2 }}
             variants={slideIn}
-            href="/work"
-            className="hover:text-xl uppercase  dark:border-white "
+            href="/work/"
+            className="hover:text-xl uppercase   "
           >
             work
           </motion.a>
