@@ -17,10 +17,11 @@ const Contact = () => {
         "service_67zt74a",
         "template_ykf37ot",
         {
-          form_name: form.name,
+          from_name: form.name,
           to_name: "Benjamin",
           from_email: form.email,
           message: form.message,
+          to_email: "wen00033@algonquinlive.com",
         },
         "CPpjiv2w1zFqS7rYF"
       )
