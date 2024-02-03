@@ -1,17 +1,27 @@
 import * as Form from "@radix-ui/react-form";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const form = useRef();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm(
+      .send(
         "service_67zt74a",
         "template_ykf37ot",
-        form.current,
+        {
+          form_name: form.name,
+          to_name: "Benjamin",
+          from_email: form.email,
+          message: form.message,
+        },
         "CPpjiv2w1zFqS7rYF"
       )
       .then(
@@ -23,7 +33,12 @@ const Contact = () => {
         }
       );
   };
-
+  const handleFunction = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setForm({ ...form, [name]: value });
+    console.log(form);
+  };
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -35,10 +50,28 @@ const Contact = () => {
         Get in touch and ask me anything!
       </h2>
       <Form.Root
-        ref={form}
         action="mailto:benjamin850316@gmail.com"
         className=" self-center"
       >
+        <Form.Field className="grid mb-[10px] " name="email">
+          <div className="flex items-baseline justify-between ">
+            <Form.Label className="uppercase font-bold  leading-[35px] text-black  dark:text-white">
+              Name
+            </Form.Label>
+          </div>
+          <Form.Control asChild>
+            <input
+              name="name"
+              onChange={handleFunction}
+              // onChange={handleFunction}
+              // value={form.name}
+              className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none dark:text-black shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6"
+              type="text"
+              required
+              autoComplete="new-name"
+            />
+          </Form.Control>
+        </Form.Field>
         <Form.Field className="grid mb-[10px] " name="email">
           <div className="flex items-baseline justify-between ">
             <Form.Label className="uppercase font-bold  leading-[35px] text-black  dark:text-white">
@@ -59,11 +92,14 @@ const Contact = () => {
           </div>
           <Form.Control asChild>
             <input
+              name="email"
               className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none dark:text-black shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6"
               type="email"
               required
-              auto
-              autocomplete="new-email"
+              autoComplete="new-email"
+              onChange={handleFunction}
+              value={form.email}
+              // onChange={handleFunction}
             />
           </Form.Control>
         </Form.Field>
@@ -83,7 +119,10 @@ const Contact = () => {
             <textarea
               className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex appearance-none items-center justify-center rounded-[4px] p-[10px] text-[15px] leading-none dark:text-black shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6 resize-none"
               required
-              autocomplete="new-message"
+              autoComplete="new-message"
+              value={form.message}
+              onChange={handleFunction}
+              name="message"
             />
           </Form.Control>
         </Form.Field>
