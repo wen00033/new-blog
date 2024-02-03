@@ -96,7 +96,7 @@ function Navbar() {
             whileHover={{ scale: 1.2 }}
             variants={slideIn}
             href="/work/"
-            className="hover:text-5xl uppercase text-3xl  "
+            className="hover:text-5xl uppercase text-3xl font-black "
           >
             work
           </motion.a>
