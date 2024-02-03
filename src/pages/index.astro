@@ -8,32 +8,24 @@ import { TypeAnimation } from "react-type-animation";
 
 <Layout title="about">
   <section class="flex flex-col md:flex-row">
-    <motion.div
-      client:load
-      drag
-      dragConstraints={{
-        top: -50,
-        left: -50,
-        right: 50,
-        bottom: 50,
-      }}
-      className="overflow-hidden rounded-2xl m-10"
-    >
+    <div class="overflow-hidden rounded-2xl m-10">
       <img
         class="w-full object-cover aspect-square"
         src="/mypicture.jpg"
         alt="image"
       />
-    </motion.div>
+    </div>
     <div class="md:-order-1 md:self-center">
       <TypeAnimation
         client:load
         sequence={[
-          "Hello guys! I'm a movie lover",
+          "Hello guys! I'm a movie lover.",
           1000,
-          "Hello guys! I'm a cat lover",
+          "Hello guys! I'm a cat lover.",
           1000,
-          "Hello guys! I'm a Front-end developer",
+          "Hello guys! I'm a Peer tutor.",
+          1000,
+          "Hello guys! I'm a Front-end developer.",
           1000,
         ]}
         wrapper="span"
