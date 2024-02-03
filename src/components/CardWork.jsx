@@ -20,7 +20,7 @@ function CardWork({ data, url }) {
         <div className="flex gap-2">
           {data.category.map((el, i) => (
             <Badge key={i} className="hover:scale-110">
-              {el}
+              {el.toUpperCase()}
             </Badge>
           ))}
         </div>
@@ -28,9 +28,6 @@ function CardWork({ data, url }) {
           {data.date}
         </Badge>
       </CardHeader>
-      <a href={url} className={buttonVariants()}>
-        Read More...
-      </a>
     </Card>
   );
 }
