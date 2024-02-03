@@ -62,6 +62,8 @@ const Contact = () => {
               className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none dark:text-black shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6"
               type="email"
               required
+              auto
+              autocomplete="new-email"
             />
           </Form.Control>
         </Form.Field>
@@ -81,6 +83,7 @@ const Contact = () => {
             <textarea
               className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex appearance-none items-center justify-center rounded-[4px] p-[10px] text-[15px] leading-none dark:text-black shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6 resize-none"
               required
+              autocomplete="new-message"
             />
           </Form.Control>
         </Form.Field>
