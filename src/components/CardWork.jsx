@@ -1,9 +1,7 @@
 import { AspectRatio } from "./ui/aspect-ratio";
-import { Badge, badgeVariants } from "./ui/badge";
+import { Badge } from "./ui/badge";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
-
 import { Img } from "react-image";
-import { buttonVariants } from "@/components/ui/button";
 
 function CardWork({ data, url }) {
   return (
