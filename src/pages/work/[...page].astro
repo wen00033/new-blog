@@ -5,7 +5,7 @@ import MyPagination from "../../components/Pagination";
 export async function getStaticPaths({ paginate }) {
   const allWorks = await Astro.glob("./*.md");
   return paginate(allWorks, {
-    pageSize: 4,
+    pageSize: 3,
   });
 }
 const { page } = Astro.props;
