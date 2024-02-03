@@ -2,17 +2,18 @@
 import { Linkedin } from "lucide-react";
 import { Github } from "lucide-react";
 import Layout from "../layouts/Pagelayout.astro";
-import { motion } from "framer-motion";
+import { Image } from "astro:assets";
+import myPhoto from "../../public/mypicture.jpg";
 import { TypeAnimation } from "react-type-animation";
 ---
 
 <Layout title="about">
   <section class="flex flex-col md:flex-row">
     <div class="overflow-hidden rounded-2xl m-10">
-      <img
+      <Image
+        src={myPhoto}
+        alt="profile-image"
         class="w-full object-cover aspect-square"
-        src="/mypicture.jpg"
-        alt="image"
       />
     </div>
     <div class="md:-order-1 md:self-center">

@@ -9,7 +9,12 @@ function CardWork({ data, url }) {
       <a href={url}>
         <div className="overflow-hidden">
           <AspectRatio ratio={16 / 7.2}>
-            <Img loading="lazy" src={data.images.src} />
+            <Img
+              decode={false}
+              loading="lazy"
+              src={data.images.src}
+              alt={data.images.alt}
+            />
           </AspectRatio>
         </div>
       </a>
