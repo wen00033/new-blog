@@ -3,7 +3,7 @@ layout: "../../layouts/Worklayout.astro"
 title: "Video game app"
 date: "2023-05-11"
 author: "Benjamin"
-images: { src: "/Video-game-site.png", alt: "video-game-site" }
+images: { src: "/Video game site.webp", alt: "video-game-site" }
 description: " video game app using pure JavaScript, implementing the MVC structure to handle data flow."
 draft: "false"
 category: ["javascript"]
