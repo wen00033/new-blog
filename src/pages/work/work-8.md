@@ -1,14 +1,14 @@
 ---
 layout: "../../layouts/Worklayout.astro"
-title: "Old Portfolio"
-date: "2023-9-10"
+title: "Video game app"
+date: "2023-05-11"
 author: "Benjamin"
-images: { src: "/Welcome to benjamins website.webp", alt: "myprofile" }
-description: "Frontend Mentor news homepage"
+images: { src: "/Video game site.webp", alt: "video-game-site" }
+description: " video game app using pure JavaScript, implementing the MVC structure to handle data flow."
 draft: "false"
-category: ["React", "Tailwind"]
-github: "https://github.com/wen00033/new-portfolio"
-website: "https://benjamin-wen.netlify.app/"
+category: ["javascript"]
+github: "https://github.com/wen00033/gameapp"
+website: "https://wen00033.github.io/gameapp/"
 ---
 
-This is the first react project I design for myself to create a portfolio. As this website contain all my previous projects. The only issue is the images are loading slower. I have implement React Spring to create page transition and page animation.
+From scratch design in figma until craft real interactive website.The first website using complete javascript to handle search function, pagination, loading screen and local storage.
