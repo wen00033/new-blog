@@ -51,11 +51,18 @@ import { Badge } from "../components/ui/badge";
           href={frontmatter.website}
           target="_blank"><MousePointer2 />Check My website !</a
         >
-        <a
-          class="flex gap-1 hover:scale-110 transition"
-          href={frontmatter.github}
-          target="_blank"><Github />Check guthub</a
-        >
+        {
+          frontmatter.github && (
+            <a
+              class="flex gap-1 hover:scale-110 transition"
+              href={frontmatter.github}
+              target="_blank"
+            >
+              <Github />
+              Check guthub
+            </a>
+          )
+        }
       </div>
     </div>
     <div class="work-content align-middle">
