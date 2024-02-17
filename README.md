@@ -1,3 +1,3 @@
-# Benjamin's Portfolio <br/>
-Tech : Astro
-Components: React
+# Benjamin's Portfolio 
+Tech : Astro <br/>
+Components: React <br/>
