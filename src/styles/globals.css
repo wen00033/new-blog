@@ -67,6 +67,12 @@
   }
 }
 
+.standard-img {
+  height: 350px;
+  justify-content: center;
+  align-items: center;
+}
+
 @layer base {
   * {
     @apply border-border;
