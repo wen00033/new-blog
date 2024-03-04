@@ -7,8 +7,8 @@ images: { src: "/landingpage.png", alt: "landingpage" }
 description: "Frontend Mentor news homepage"
 draft: "false"
 category: ["css", "html"]
-github: "https://github.com/wen00033/gameapp"
-website: "https://wen00033.github.io/gameapp/"
+github: "https://github.com/wen00033/frontendmentor/tree/master"
+website: "https://wen00033.github.io/frontendmentor/"
 ---
 
 Take this challenge to practice HTML and CSS Grid skills.
