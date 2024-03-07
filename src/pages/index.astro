@@ -4,7 +4,15 @@ import { Github } from "lucide-react";
 import Layout from "../layouts/Pagelayout.astro";
 import { Image } from "astro:assets";
 import myPhoto from "../../public/mypicture.jpg";
+import Artboard from "../../public/Artboard.svg";
 import { TypeAnimation } from "react-type-animation";
+import "../../public/skillsicon/astro-svgrepo-com.svg";
+// import { Img } from "react-image";
+const images = await Astro.glob("public/skillsicon/*.svg");
+const posts = await Astro.glob("./work/*.md");
+const desOrder = posts
+  .map((post) => post)
+  .sort((a, b) => b.frontmatter.date - a.frontmatter.date);
 ---
 
 <Layout title="about">
@@ -31,7 +39,7 @@ import { TypeAnimation } from "react-type-animation";
         ]}
         wrapper="span"
         speed={50}
-        style={{ fontSize: "2em", display: "inline-block" }}
+        style={{ fontSize: "1.5rem", display: "inline-block" }}
         repeat={Infinity}
       />
 
@@ -52,4 +60,102 @@ import { TypeAnimation } from "react-type-animation";
       </div>
     </div>
   </section>
+  <section class="skill-section" transition:animate="fade">
+    <h2
+      class="w-fit px-2 text-xl my-1 md:text-3xl p-1 uppercase font-display tracking-wide text-right"
+    >
+      tech skills
+    </h2>
+    <div
+      class="skills-container flex flex-wrap px-2 gap-2 md:px-10 md:m-5 md:gap-5"
+    >
+      {
+        images.map((skill) => (
+          <img
+            class=" aspect-square h-8  md:h-12"
+            src={skill.default.src}
+            alt="skills"
+          />
+        ))
+      }
+    </div>
+  </section>
+  <section>
+    <h2
+      class="w-fit px-2 text-xl my-1 md:text-3xl p-1 uppercase font-display tracking-wide text-right"
+    >
+      Who am i?
+    </h2>
+    <div class="grid md:grid-cols-2 justify-center align-middle">
+      <Image src={Artboard} alt="profile-image" class="object-cover" />
+      <p class="whitespace-normal first-letter:uppercase self-center">
+        I'm a graduate student from Algonquin College's Interactive Media Design
+        program. Enjoy tutoring students with <strong
+          >front-end development</strong
+        >. Since my first touch with designing a website, building prototypes
+        and finally visualizing websites with code, I have been amazed by the
+        diversity of the web world. Always experiment with new technology and
+        learn new products.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2
+      class="w-fit px-2 text-xl my-1 md:text-3xl p-1 uppercase font-display tracking-wide text-right"
+    >
+      New projects
+    </h2>
+    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+      {
+        desOrder.slice(1, 5).map((post) => (
+          <div>
+            <a class=" cursor-pointer" href={post.url}>
+              <img
+                src={post.frontmatter.images.src}
+                alt="profile-image"
+                class=" rounded-md standard-img w-full object-cover
+                  aspect-auto"
+              />
+            </a>
+            <h2 class=" font-bold text-center uppercase">
+              {post.frontmatter.title}
+            </h2>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+  <section>
+    <h2
+      class="w-fit px-2 text-xl my-1 md:text-3xl p-1 uppercase font-display tracking-wide text-right"
+    >
+      services
+    </h2>
+    <div class="grid md:grid-cols-2 p-2 gap-2 my-5 md:my-2">
+      <div class="flex flex-col gap-2 place-items-center">
+        <img class="aspect-square w-24" src="/design.svg" alt="design" />
+        <h3 class="font-display">Web design</h3>
+      </div>
+      <div class="flex flex-col gap-2 place-items-center">
+        <img
+          class="aspect-square w-24"
+          src="/web-development.svg"
+          alt="web developement"
+        />
+        <h3 class="text-center font-display">Web development</h3>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const section = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entries) => {
+        entries.target.classList.toggle("slideIn", entries.isIntersecting);
+      });
+    });
+    section.forEach((section) => {
+      observer.observe(section);
+    });
+  </script>
 </Layout>

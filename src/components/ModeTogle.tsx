@@ -11,10 +11,10 @@ import {
 export function ModeToggle() {
   const [theme, setThemeState] = React.useState<
     "theme-light" | "dark" | "system"
-  >("theme-light");
+  >("system");
 
   React.useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains("dark");
+    const isDarkMode = localStorage.getItem("theme") === "dark";
     setThemeState(isDarkMode ? "dark" : "theme-light");
   }, []);
 

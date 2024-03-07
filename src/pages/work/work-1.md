@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/Worklayout.astro"
 title: "Interactive contact book"
-date: "2023-07-10"
+date: "2023-05-10"
 author: "Benjamin"
 images: { src: "/react-contact.png", alt: "Interactive contact book" }
 description: "using react and firebase to get the instant data online "

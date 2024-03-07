@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/Worklayout.astro"
 title: "Mirror Mountain page styling"
-date: "2023-06-20"
+date: "2023-2-20"
 author: "Benjamin"
 images: { src: "/MMFF.png", alt: "MMFF" }
 description: "freelance opportunity with the company, main role as page styling."
