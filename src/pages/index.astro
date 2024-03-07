@@ -154,8 +154,11 @@ const desOrder = posts
         entries.target.classList.toggle("slideIn", entries.isIntersecting);
       });
     });
-    section.forEach((section) => {
-      observer.observe(section);
-    });
+    section.forEach(
+      (section) => {
+        observer.observe(section);
+      },
+      { threshold: 0 }
+    );
   </script>
 </Layout>
