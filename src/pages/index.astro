@@ -150,13 +150,13 @@ const desOrder = posts
   <script>
     const option = {
       root: null,
-      threshold: 0,
-      rootMargin: "-200px",
+      threshold: 0.2,
+      rootMargin: "0",
     };
     const section = document.querySelectorAll("section");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entries) => {
-        entries.target.classList.toggle("slideIn", entries.isIntersecting);
+        entries.target.classList.add("slideIn");
       });
     });
     section.forEach((section) => {

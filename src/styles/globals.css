@@ -93,7 +93,7 @@ section {
 }
 
 .slideIn {
-  animation: 2.5s slideIn;
+  animation: 4s slideIn;
 }
 
 @keyframes slideIn {
