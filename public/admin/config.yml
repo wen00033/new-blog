@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: wen00033/new-blog
-  branch: main
+  branch: master
   squash_merges: true
   open_authoring: false
 publish_mode: editorial_workflow
