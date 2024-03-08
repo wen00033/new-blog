@@ -7,7 +7,7 @@ backend:
 publish_mode: editorial_workflow
 media_folder: public/images
 public_folder: /images
-site_url: "https://app.netlify.com/sites/benjamin-works-webiste"
+site_url: "http://localhost:8888/admin#/"
 
 collections:
   - name: post
