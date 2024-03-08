@@ -3,7 +3,7 @@ backend:
   repo: wen00033/new-blog
   branch: main
   squash_merges: true
-  open_authoring: true
+  open_authoring: false
 publish_mode: editorial_workflow
 media_folder: public/images
 public_folder: /images
