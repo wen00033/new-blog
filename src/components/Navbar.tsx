@@ -57,6 +57,12 @@ function Navbar() {
           >
             contact
           </a>
+          <a
+            href="/blog/"
+            className=" p-1 rounded-sm  font-black hover:scale-110   "
+          >
+            blogs
+          </a>
         </NavigationMenuList>
       )}
       {!matches && (
@@ -71,7 +77,7 @@ function Navbar() {
           variants={container}
           initial="hidden"
           animate="show"
-          className=" transition-all  flex flex-col  dark:bg-purple-950 justify-center text-center gap-28 fixed left-0 bottom-0 w-full h-screen bg-purple-400 "
+          className=" transition-all  flex flex-col  dark:bg-purple-950 justify-center text-center gap-14 fixed left-0 bottom-0 w-full h-screen bg-purple-400 "
         >
           <motion.a
             whileTap={{ scale: 0.8 }}
@@ -99,6 +105,15 @@ function Navbar() {
             className="hover:text-5xl uppercase text-3xl font-black "
           >
             work
+          </motion.a>
+          <motion.a
+            whileTap={{ scale: 0.8 }}
+            whileHover={{ scale: 1.2 }}
+            variants={slideIn}
+            href="/blog/"
+            className="hover:text-5xl uppercase text-3xl font-black "
+          >
+            blogs
           </motion.a>
         </motion.div>
       ) : (

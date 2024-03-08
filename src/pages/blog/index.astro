@@ -1,0 +1,27 @@
+---
+import WorkLayout from "../../layouts/Pagelayout.astro";
+
+const allPosts = await Astro.glob("../../content/posts/*.md");
+
+console.log(allPosts);
+---
+
+<WorkLayout title="blogs">
+  <div class="grid gap-5">
+    {
+      allPosts.map((post) => (
+        <div>
+          <div class=" flex gap-5 place-items-center ">
+            <h1 class="font-display text-2xl uppercase">
+              {post.frontmatter.title}
+            </h1>
+            <p class=" text-sm italic underline">
+              {post.frontmatter.publishedAt}
+            </p>
+          </div>
+          <p>Description: {post.frontmatter.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</WorkLayout>

@@ -109,7 +109,7 @@ const desOrder = posts
     <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
       {
         desOrder.slice(3, 5).map((post) => (
-          <div>
+          <div class=" hover:scale-110 transition-all shadow-sm">
             <a class=" cursor-pointer" href={post.url}>
               <img
                 src={post.frontmatter.images.src}
