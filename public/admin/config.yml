@@ -18,6 +18,12 @@ collections:
     format: frontmatter
     # preview_path: post/{{slug}}
     fields:
+      - {
+          name: layout,
+          default: "../../layouts/Worklayout.astro",
+          label: Layout,
+          widget: hidden,
+        }
       - { name: title, label: Title }
       - { name: description, label: Description }
       - { name: publishedAt, label: Date, widget: date }
