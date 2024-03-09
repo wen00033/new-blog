@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Button } from "../components/ui/button.jsx";
+// import  from "../components/ui/button";
+const { frontmatter } = Astro.props;
+
+console.log(frontmatter);
+---
+
+<Layout>
+  <div class="flex-grow flex flex-col">
+    <h1 class="my-4 font-black text-2xl md:text-3xl uppercase font-display">
+      {frontmatter.title}
+    </h1>
+    <p class="italic font-semibold underline">
+      Date: {frontmatter.publishedAt.slice(0, 10)}
+    </p>
+    <p class="p-2 text-pretty">
+      <slot />
+    </p>
+  </div>
+  <a href="/blog">
+    <Button className="w-fit my-5 mx-auto">Back to blogs</Button>
+  </a>
+</Layout>

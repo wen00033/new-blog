@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/BlogLayout.astro
 title: test2
 description: asda
 publishedAt: 2024-03-08T17:28:21.056Z

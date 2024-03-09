@@ -20,7 +20,7 @@ collections:
     fields:
       - {
           name: layout,
-          default: "../../layouts/Worklayout.astro",
+          default: "../../layouts/BlogLayout.astro",
           label: Layout,
           widget: hidden,
         }

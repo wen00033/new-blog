@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/BlogLayout.astro
 title: test
 description: test-1
 publishedAt: 2024-03-08T17:25:19.630Z
