@@ -1,9 +1,8 @@
 ---
 import WorkLayout from "../../layouts/Pagelayout.astro";
-
-const allPosts = await Astro.glob("../../content/posts/*.md");
-
-console.log(allPosts);
+const allPosts = await Astro.glob("./*.md");
+// console.log(allPosts.map((post) => post.url));
+// console.log(page);
 ---
 
 <WorkLayout title="blogs">
@@ -20,6 +19,7 @@ console.log(allPosts);
             </p>
           </div>
           <p>Description: {post.frontmatter.description}</p>
+          <a href={post.url}>read more...</a>
         </div>
       ))
     }

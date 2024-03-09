@@ -13,10 +13,10 @@ site_url: "https://master--benjamin-works-webiste.netlify.app"
 collections:
   - name: post
     label: Posts
-    folder: src/content/posts
+    folder: src/pages/blog
     create: true
     format: frontmatter
-    preview_path: post/{{slug}}
+    # preview_path: post/{{slug}}
     fields:
       - { name: title, label: Title }
       - { name: description, label: Description }
