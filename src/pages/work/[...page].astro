@@ -4,7 +4,11 @@ import CardWork from "../../components/CardWork";
 import MyPagination from "../../components/Pagination";
 export async function getStaticPaths({ paginate }) {
   const allWorks = await Astro.glob("./*.md");
-  return paginate(allWorks, {
+  const sortAllworks = allWorks.sort((a, b) => {
+    return Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date);
+  });
+  // console.log(allWorks);
+  return paginate(sortAllworks, {
     pageSize: 3,
   });
 }

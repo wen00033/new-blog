@@ -11,9 +11,9 @@ import "../../public/skillsicon/astro-svgrepo-com.svg";
 // import { Img } from "react-image";
 const images = await Astro.glob("public/skillsicon/*.svg");
 const posts = await Astro.glob("./work/*.md");
-const desOrder = posts
-  .map((post) => post)
-  .sort((a, b) => b.frontmatter.date - a.frontmatter.date);
+const sortAllworks = posts.sort((a, b) => {
+  return Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date);
+});
 ---
 
 <Layout title="about">
@@ -108,7 +108,7 @@ const desOrder = posts
     </h2>
     <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
       {
-        desOrder.slice(3, 5).map((post) => (
+        sortAllworks.slice(0, 2).map((post) => (
           <div class=" hover:scale-110 transition-all shadow-sm">
             <a class=" cursor-pointer" href={post.url}>
               <img
