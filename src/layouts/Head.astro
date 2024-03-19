@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import Seo from "../components/Seo.astro";
 interface Props {
   title: string;
 }
@@ -7,13 +8,14 @@ import "../styles/globals.css";
 ---
 
 <head>
-  <ViewTransitions fallback="swap" />
   <meta charset="UTF-8" />
   <meta name="description" content="Astro description" />
   <meta name="viewport" content="width=device-width" />
   <link rel="icon" type="ico/x-icon" href="/favicon.ico" />
   <meta name="generator" content={Astro.generator} />
+  <Seo />
   <title>Welcome to benjamin Website</title>
+  <ViewTransitions fallback="swap" />
 </head>
 
 <script>

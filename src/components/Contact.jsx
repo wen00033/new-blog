@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [submit, setSubmit] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -12,6 +13,14 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    if (form.name === "" || form.email === "" || form.message === "") {
+      alert("Please fill in all the fields");
+      return;
+    }
+    if (form.email.includes("@") === false) {
+      alert("Please enter a valid email");
+      return;
+    }
     emailjs
       .send(
         "service_67zt74a",
@@ -28,6 +37,8 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setForm({ name: "", email: "", message: "" });
+          setSubmit(true);
         },
         (error) => {
           console.log(error.text);
@@ -61,6 +72,8 @@ const Contact = () => {
           </div>
           <Form.Control asChild>
             <input
+              placeholder="Your name..."
+              disabled={submit}
               name="name"
               onChange={handleFunction}
               className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none dark:text-black shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6"
@@ -90,6 +103,8 @@ const Contact = () => {
           </div>
           <Form.Control asChild>
             <input
+              placeholder="Your email..."
+              disabled={submit}
               name="email"
               className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none dark:text-black shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6"
               type="email"
@@ -115,6 +130,10 @@ const Contact = () => {
           </div>
           <Form.Control asChild>
             <textarea
+              placeholder={
+                setSubmit ? "Your message...." : "Your message have submitted!"
+              }
+              disabled={submit}
               className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex appearance-none items-center justify-center rounded-[4px] p-[10px] text-[15px] leading-none dark:text-black shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6 resize-none"
               required
               autoComplete="new-message"
