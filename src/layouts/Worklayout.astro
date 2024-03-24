@@ -8,7 +8,10 @@ import { Badge } from "../components/ui/badge";
 ---
 
 <Layout title={frontmatter.title}>
-  <section class="grid md:grid-cols-2 gap-3 md:gap-10">
+  <section
+    transition:name={frontmatter.title}
+    class="grid md:grid-cols-2 gap-3 md:gap-10"
+  >
     <div>
       <h1
         class="w-fit px-2 skew-y--3 justify-start text-3xl my-1 md:text-xl p-1 uppercase font-extrabold font-display tracking-wide"
@@ -72,7 +75,9 @@ import { Badge } from "../components/ui/badge";
         >
           How I make it?
         </span>
-        <slot />
+        <div class=" p-5" >
+          <slot />
+        </div>
       </div>
     </div>
   </section>

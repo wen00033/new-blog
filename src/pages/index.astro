@@ -1,4 +1,5 @@
 ---
+// import { ViewTransitions } from "astro:transitions";
 import { Button } from "@/components/ui/button";
 import { Linkedin } from "lucide-react";
 import { Github } from "lucide-react";
@@ -61,7 +62,7 @@ const sortAllworks = posts.sort((a, b) => {
       </div>
     </div>
   </section>
-  <section class="skill-section" transition:animate="fade">
+  <section class="skill-section">
     <h2
       class="w-fit px-2 text-xl my-1 md:text-3xl p-1 uppercase font-display tracking-wide text-right"
     >
@@ -109,8 +110,14 @@ const sortAllworks = posts.sort((a, b) => {
     <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
       {
         sortAllworks.slice(0, 2).map((post) => (
-          <div class=" hover:scale-110 transition-all shadow-sm">
+          <div
+            transition:name={post.frontmatter.title}
+            class=" relative hover:scale-110 transition-all shadow-sm"
+          >
             <a class=" cursor-pointer" href={post.url}>
+              <h2 class="absolute p-10 opacity-0 h-full transition-all hover:opacity-75 hover:text-3xl hover:bg-purple-400 hover:inset-0 font-bold text-center uppercase">
+                {post.frontmatter.title}
+              </h2>
               <img
                 src={post.frontmatter.images.src}
                 alt="profile-image"
@@ -118,9 +125,6 @@ const sortAllworks = posts.sort((a, b) => {
                   aspect-auto"
               />
             </a>
-            <h2 class=" font-bold text-center uppercase">
-              {post.frontmatter.title}
-            </h2>
           </div>
         ))
       }

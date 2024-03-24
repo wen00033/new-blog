@@ -20,7 +20,8 @@ import "../styles/globals.css";
 
 <script>
   const getThemePreference = () => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+    const check = localStorage.getItem("theme");
+    if (check) {
       return localStorage.getItem("theme");
     }
     return window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -28,6 +29,7 @@ import "../styles/globals.css";
       : "light";
   };
   const isDark = getThemePreference() === "dark";
+
   document.documentElement.classList[isDark ? "add" : "remove"]("dark");
 
   if (typeof localStorage !== "undefined") {

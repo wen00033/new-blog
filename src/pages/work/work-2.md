@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/Worklayout.astro"
 title: "Severless React national App"
-date: "2023-11-20"
+date: "2024-01-20"
 author: "Benjamin"
 images: { src: "/Search-your-country.png", alt: "search-your-country" }
 description: "Create app with react and react router "
