@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/Worklayout.astro"
 title: "Redux Task master"
-date: "2024-01-02"
+date: "2024-03-28"
 author: "Benjamin"
 images: { src: "/task-master.png", alt: "task-master" }
 description: "a full-stack task master app by using react and firebase as backend"
