@@ -4,7 +4,7 @@ title: "Redux Task master"
 date: "2024-03-28"
 author: "Benjamin"
 images: { src: "/task-master.png", alt: "task-master" }
-description: "a full-stack task master app by using react and firebase as backend"
+description: "Redux with React Task manager deploy with netlify"
 draft: "false"
 category: ["react", "redux", "netlify"]
 github: "https://github.com/wen00033/task-manager"
