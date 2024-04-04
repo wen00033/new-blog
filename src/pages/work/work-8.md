@@ -11,4 +11,4 @@ github: "https://github.com/wen00033/gameapp"
 website: "https://wen00033.github.io/gameapp/"
 ---
 
-From scratch design in figma until craft real interactive website.The first website using complete javascript to handle search function, pagination, loading screen and local storage.
+From scratch design in Figma to crafting into the website. The first website used complete javascript to handle search functions, pagination, loading screens and local storage.

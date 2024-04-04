@@ -11,4 +11,4 @@ github: "https://github.com/wen00033/Vue-multi-step-form-main"
 website: "https://multi-step-formpage.netlify.app/"
 ---
 
-To create this website, I have created in VUE composition API. Create 4 steps and connect with VUE router by Emittiing the function to the APP and passing to the step component as prop.
+To create this website, I created in Vue composition API. Create 4 steps and connect with the VUE router by emit the function to the APP and passing it to the step component as prop.

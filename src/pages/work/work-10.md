@@ -11,4 +11,4 @@ github: ""
 website: "https://mirror-mounatin-project.netlify.app/"
 ---
 
-Freelance project with mirror mountain festival, as main role create styling pages match as the given design. Building interactive components as navbar and carousel.
+Freelance project with Mirror Mountain Film Festival, as main role creating styling pages match the given design. Building interactive components such as navbar and carousel.

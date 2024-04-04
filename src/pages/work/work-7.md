@@ -11,4 +11,4 @@ github: "https://github.com/wen00033/frontendmentor/tree/master"
 website: "https://wen00033.github.io/frontendmentor/"
 ---
 
-Take this challenge to practice HTML and CSS Grid skills.
+Take this challenge from FrontendMentor to practice HTML and CSS Grid skills.

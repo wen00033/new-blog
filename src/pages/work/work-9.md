@@ -11,4 +11,4 @@ github: ""
 website: "https://64e96c26e5e53c7283cb6d8a--benjamin-onlineshop.netlify.app/#/"
 ---
 
-create e-commerce website by using random shop API, once user select one of the item to shopping cart, it will automatically calculate the total price for the total expense. Underneath every single product list out recommendation products.
+Created an e-commerce website by using random shop API. Once the user selects one of the items in the shopping cart, it will automatically calculate the total price for the total expense.

@@ -11,4 +11,4 @@ github: "https://github.com/wen00033/interactive-card-details-form-main"
 website: "https://wen00033.github.io/interactive-card-details-form-main/"
 ---
 
-Create this website by HTML, CSS and Javascript.Take this challenge website from frontend Mentor website.
+Create this website in HTML, CSS and Javascript. Take this challenge website from the frontend Mentor website.

@@ -11,4 +11,4 @@ github: "https://github.com/wen00033/task-manager"
 website: "https://benjamin-task-manager.netlify.app/"
 ---
 
-For this website, I created it with the frontend using React and combined it with redux. Every time a user can create their own task collection. In each collection, users can create tasks categorized as todo, doing, and done, along with subtasks.
+For this website, I created it with the front end using React and combined it with redux. Every time a user can create their task collection. In each collection, users can create tasks categorized as todo, doing, and done, along with subtasks.

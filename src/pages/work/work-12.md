@@ -11,4 +11,4 @@ github: "https://github.com/wen00033/nuxt-app"
 website: "https://selling-site.netlify.app/"
 ---
 
-Based on the concept of the JAM stack to create SSR in Nuxt.js with Headless CMS. Target to create website easy update, security improvements. Apply the OAuth tool to allow the admin to update content. Relies on Vue.js, and the Nuxt content and SASS to build the dynamic layout and content import.
+Based on the concept of the JAM stack to create SSR in Nuxt.js with Headless CMS. Target to create a website to update easily, and security improvements. Apply the OAuth tool to allow the admin to update content. Relies on Vue.js, and the Nuxt content and SASS to build the dynamic layout and content import.

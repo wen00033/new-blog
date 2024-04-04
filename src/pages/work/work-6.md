@@ -11,4 +11,4 @@ github: "https://github.com/wen00033/contactbook"
 website: "https://fastidious-fudge-bad309.netlify.app/#/"
 ---
 
-For this VUE website I create Tailwind CSS, for this website I integrated with Geo location API and Leaflet to build a map for individual user.
+For this VUE website, I created Tailwind CSS, for this website, I integrated with the Geolocation API and Leaflet to build a map for individual users.

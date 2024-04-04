@@ -11,4 +11,4 @@ github: "https://github.com/wen00033/national-map/tree/main/react-flag-api"
 website: "https://national-map-api.netlify.app/"
 ---
 
-This website I create using React inject with API. Try to use a different way to build pagination. The idea of building searching and pagination is using Netlify edge function. And organize fetch API in sever side. Every time the page search or tap the next page it will refetch the API.
+This website I create using React inject with API. Try to use a different way to build pagination. The idea of building searching and pagination is using the Netlify edge function. And organize fetch API on the server side. Every time the page searches or taps the next page it will refetch the API.
