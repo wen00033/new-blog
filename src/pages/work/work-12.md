@@ -7,7 +7,7 @@ images: { src: "/restaurant.png", alt: "restaurant" }
 description: "Nuxtjs with Netlify CMS"
 draft: "false"
 category: ["vue", "nuxt", "netlify"]
-github: ""
+github: "https://github.com/wen00033/nuxt-app"
 website: "https://selling-site.netlify.app/"
 ---
 
