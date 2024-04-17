@@ -8,7 +8,7 @@ description: "Frontend Mentor interactive card details form in using HTML, CSS a
 draft: "false"
 category: ["html", "css", "javascript"]
 github: "https://github.com/wen00033/interactive-card-details-form-main"
-website: "https://wen00033.github.io/interactive-card-details-form-main/"
+website: "https://interactive-card-details-form-main-1.netlify.app/"
 ---
 
 Create this website in HTML, CSS and Javascript. Take this challenge website from the frontend Mentor website.

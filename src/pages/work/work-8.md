@@ -8,7 +8,7 @@ description: " video game app using pure JavaScript, implementing the MVC struct
 draft: "false"
 category: ["javascript"]
 github: "https://github.com/wen00033/gameapp"
-website: "https://wen00033.github.io/gameapp/"
+website: "https://main--gameapp-benjamin.netlify.app/"
 ---
 
 From scratch design in Figma to crafting into the website. The first website used complete javascript to handle search functions, pagination, loading screens and local storage.
