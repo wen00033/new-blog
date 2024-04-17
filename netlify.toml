@@ -4,8 +4,12 @@
   functions = "netlify/functions"
   publish = "dist"
 
-  ## Uncomment to use this redirect for Single Page Applications like create-react-app.
-  ## Not needed for static site generators.
+[[redirects]]
+  from = "/git/*"
+  to = "https://github.com/wen00033/gameapp/:splat"
+  force = true
+
+
   #[[redirects]]
   #  from = "/*"
   #  to = "/index.html"
@@ -19,3 +23,4 @@
   #  publish = "dist" # Folder with the static content for _redirect file
 
   ## more info on configuring this file: https://ntl.fyi/file-based-build-config
+
