@@ -5,11 +5,9 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/git/*"
-  to = "https://github.com/wen00033/gameapp/:splat"
+  from = "https://benjamin-wen.me/gameapp/"
+  to = "https://wen00033.github.io/gameapp/:splat"
   force = true
-
-
   #[[redirects]]
   #  from = "/*"
   #  to = "/index.html"
